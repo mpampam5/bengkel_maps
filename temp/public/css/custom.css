@@ -1,0 +1,131 @@
+.logo{
+  color: #fff;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.logo-menu{
+  position: absolute;
+  text-align: center;
+  top:20px;
+  left:0;
+  right: 0;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  color:#fff;
+  font-size: 30px;
+}
+
+.img-header{
+  position: block;
+  /* top:250px; */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;;
+  height: 170px;
+
+  /* opacity: 0.9; */
+}
+
+#box-alert{
+  padding: 10px 4px 4px 4px;
+  margin: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0 5px 10px 1px rgba(0,0,0,.08);
+  box-shadow: 0 5px 10px 1px rgba(0,0,0,.08);
+  border-radius: 10px;
+  /* border:1px solid #bababa; */
+  background-color: #e76262;
+  width: 100%;
+}
+
+/* #box-alert .icon-right img{
+  position: absolute;
+  left:1px;
+} */
+/* #box-alert .no-bordered{
+  border-top-style: none!important;
+} */
+
+#box-alert .img-alert{
+  width:auto;
+}
+
+#box-alert .text-alert{
+  font-size: 11px;
+  color: #ffffff;
+  font-weight:
+
+}
+
+.no-bordered table {
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+
+
+
+#box-menu a{
+  color:#000;
+}
+
+#box-menu{
+  padding: 10px 1px 1px 1px;
+  margin-top: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0 5px 10px 1px rgba(0,0,0,.08);
+  box-shadow: 0 5px 10px 1px rgba(0,0,0,.08);
+  border-radius: 10px;
+  /* border:1px solid #bababa; */
+  background-color: #eeeeee;
+}
+/*
+#box-menu img{
+  width: 76px;
+  height:57px;
+} */
+
+#box-menu .text-menu{
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  font-family:inherit;
+}
+
+#box-menu .text-alert{
+  position: absolute;
+  right: 40px;
+  top: 60px;
+  background-color: red;
+  color:#fff;
+  font-weight: bold;
+  padding: 2px 8px 2px 8px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+
+.navbar-back,
+.nav-responsive {
+  display: none;
+}
+
+@media (max-width: 992px) {
+
+  .navbar-back {
+    float: left;
+    display: inline-block;
+    color: #fff !important;
+    font-size: 16px;
+    padding: 4px 8px;
+    z-index: 33;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 4px;
+    margin-left: 15px;
+  }
+  .navbar-back:focus, .navbar-back:active, .navbar-back:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
