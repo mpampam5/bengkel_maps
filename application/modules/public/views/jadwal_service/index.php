@@ -75,7 +75,12 @@ display: none;
                   return '<a href="<?=base_url()?>jadwal_service/detail/'+row.id_jadwal+'" id="detail_notif">'+data+'</a>';
               }
             },
-              {"data":"keterangan"}
+              {"data":"keterangan",
+                render:function(data,type,row,meta)
+                {
+                    return '<a href="<?=base_url()?>jadwal_service/detail/'+row.id_jadwal+'">'+data.substr(0, 20)+'</a>';
+                }
+              }
           ],
           order: [[0, 'desc']],
       });
