@@ -72,15 +72,25 @@ display: none;
               {"data":"waktu",
               render:function(data,type,row,meta)
               {
+                if (row.status=="belum") {
+                  return '<b><a href="<?=base_url()?>jadwal_service/detail/'+row.id_jadwal+'" id="detail_notif">'+data+'</a></b>';
+                }else {
                   return '<a href="<?=base_url()?>jadwal_service/detail/'+row.id_jadwal+'" id="detail_notif">'+data+'</a>';
+                }
+
               }
             },
               {"data":"keterangan",
                 render:function(data,type,row,meta)
                 {
+                  if (row.status=="belum") {
+                    return '<b><a href="<?=base_url()?>jadwal_service/detail/'+row.id_jadwal+'">'+data.substr(0, 20)+'</a></b>';
+                  }else {
                     return '<a href="<?=base_url()?>jadwal_service/detail/'+row.id_jadwal+'">'+data.substr(0, 20)+'</a>';
+                  }
                 }
-              }
+              },
+              {"data":"status","visible":false}
           ],
           order: [[0, 'desc']],
       });

@@ -35,18 +35,9 @@
 
                 <div class="col-6">
                   <div id="box-menu">
-                    <a href="<?=site_url('history')?>">
-                    <img src="<?=base_url()?>temp/public/icon/route.png" alt="">
-                    <p class="text-menu">History Perjalanan</p>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div id="box-menu">
-                    <a href="<?=site_url('tentang')?>">
-                    <img src="<?=base_url()?>temp/public/icon/menu-info2.png" alt="">
-                    <p class="text-menu">Informasi Bengkel</p>
+                    <a href="<?=site_url('google_maps')?>">
+                    <img src="<?=base_url()?>temp/public/icon/google-maps.png" alt="">
+                    <p class="text-menu">Google Maps</p>
                     </a>
                   </div>
                 </div>

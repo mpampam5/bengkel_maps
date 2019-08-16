@@ -32,6 +32,22 @@ class Home extends MY_Controller{
   }
 
 
+
+  function json_jadwal($id_trans_kendaraan)
+  {
+    $query =  $this->db->query("SELECT * FROM tb_jadwal WHERE id_trans_kendaraan=$id_trans_kendaraan AND status='belum'");
+    if ($query->num_rows()>0) {
+        $data['success']=true;
+        $data['jml'] = $query->num_rows();
+    }else {
+      $data['success']=false;
+    }
+    $this->output
+          ->set_content_type('application/json')
+          ->set_output(json_encode($data));
+  }
+
+
   function cek_service()
   {
     $id_trans_kendaraan =  $this->session->userdata('id_trans_kendaraan');

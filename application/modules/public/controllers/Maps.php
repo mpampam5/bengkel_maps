@@ -188,6 +188,11 @@ class Maps extends MY_Controller{
 
   }
 
+  function google_maps()
+  {
+    $this->temp_public->set_title('Google Maps');
+    $this->temp_public->view('maps/google_maps');
+  }
 
 
 

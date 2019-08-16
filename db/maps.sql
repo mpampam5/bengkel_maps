@@ -11,7 +11,7 @@
  Target Server Version : 50532
  File Encoding         : 65001
 
- Date: 09/08/2019 22:49:00
+ Date: 16/08/2019 21:23:07
 */
 
 SET NAMES utf8mb4;
@@ -52,13 +52,14 @@ CREATE TABLE `tb_jadwal`  (
   `id_trans_kendaraan` int(11) NULL DEFAULT NULL,
   `waktu` datetime NULL DEFAULT NULL,
   `keterangan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `status` enum('belum','sudah') CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'belum',
   PRIMARY KEY (`id_jadwal`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of tb_jadwal
 -- ----------------------------
-INSERT INTO `tb_jadwal` VALUES (1, 3, '2019-08-16 12:12:00', 'sdasda');
+INSERT INTO `tb_jadwal` VALUES (1, 3, '2019-08-16 12:12:00', 'sdasda', 'sudah');
 
 -- ----------------------------
 -- Table structure for tb_jenis_perbaikan

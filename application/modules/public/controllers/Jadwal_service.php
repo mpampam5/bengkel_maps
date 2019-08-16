@@ -28,6 +28,8 @@ class Jadwal_service extends MY_Controller{
   {
     if ($row = $this->model->detail($id)) {
         $this->temp_public->set_title('Detail Jadwal');
+        $this->db->where('id_jadwal',$id)
+                  ->update('tb_jadwal',array('status'=>'sudah'));
         $data = array('id_jadwal' => $row->id_jadwal,
                       'waktu' =>$row->waktu,
                       'keterangan'=>$row->keterangan

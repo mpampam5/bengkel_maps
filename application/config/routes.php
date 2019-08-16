@@ -69,6 +69,8 @@ $route['home'] = 'public/home';
 
 $route['maps'] = 'public/maps';
 
+$route['google_maps'] = 'public/maps/google_maps';
+
 $route['maps/(:any)/(:any)/(:any)'] = 'public/maps/lokasi_tujuan/$1/$2/$3';
 
 $route['maps/(:any)/(:any)/(:any)/(:any)'] = 'public/maps/jarak_tempuh/$1/$2/$3/$4';

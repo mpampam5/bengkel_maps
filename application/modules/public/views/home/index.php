@@ -35,6 +35,7 @@
 
                 <div class="col-6">
                   <div id="box-menu">
+                    <div id="pmb_jadwal"></div>
                     <a href="<?=site_url('jadwal_service')?>">
                     <img src="<?=base_url()?>temp/public/icon/time-card.png" alt="">
                     <p class="text-menu">Jadwal Service</p>
@@ -121,11 +122,17 @@
        url: "<?=base_url()?>public/home/json_pemberitahuan/<?=$this->session->userdata('id_trans_kendaraan')?>"
      }).done(function(json){
        if (json.success==true) {
-         // $("#pemberitahuan").hide().fadeIn(1000).html('<div class="col-lg-8 mx-auto">'+
-         //                             '<div class="alert alert-success text-center "  style="font-size:12px!important;">'+
-         //                                'Anda memiliki '+json.jml+' notifikasi yang belum dilihat.</div>'+
-         //                           '</div>');
           $("#pmb").hide().fadeIn(500).html('<span class="text-alert">'+json.jml+'</span>');
+       }
+     })
+
+
+
+     $.ajax({
+       url: "<?=base_url()?>public/home/json_jadwal/<?=$this->session->userdata('id_trans_kendaraan')?>"
+     }).done(function(json){
+       if (json.success==true) {
+          $("#pmb_jadwal").hide().fadeIn(500).html('<span class="text-alert">'+json.jml+'</span>');
        }
      })
 

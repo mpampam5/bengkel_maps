@@ -8,7 +8,8 @@ class Jadwal_service_model extends CI_Model{
     $this->datatables->select("tb_jadwal.id_jadwal,
                                 tb_jadwal.id_trans_kendaraan,
                                 DATE_FORMAT(tb_jadwal.waktu,'%d/%m/%Y %h:%i') AS waktu,
-                                tb_jadwal.keterangan");
+                                tb_jadwal.keterangan,
+                                tb_jadwal.status");
     $this->datatables->from('tb_jadwal');
     $this->datatables->where('tb_jadwal.id_trans_kendaraan',$this->session->userdata('id_trans_kendaraan'));
     //add this line for join
